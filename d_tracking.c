@@ -39,7 +39,7 @@ bool stopping_rule(double threshold); //true:停止、false:続行
 int  decision_rule(); //探索結果から最適腕を決定(推定)する。
 double bernouii(double p); //選択されたアームの報酬を決める(二値報酬)
 double threshold(int trial){
-    return log(2 * trial * (K - 1) / delta);
+    return log( ( log(trial) + 1) / delta);
 }
 
 
